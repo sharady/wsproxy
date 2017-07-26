@@ -1,8 +1,7 @@
 (jbuild_version 1)
 
-(executable
- ((name       wsproxy)
-  (public_name wsproxy)
-  (libraries   (base64 re.str lwt lwt.unix))
-))
+(library
+ ((name wslib)
+  (libraries (base64 re.str lwt lwt.unix))
+ ))
 

@@ -3,4 +3,6 @@ _build/
 
 # jbuilder generated files
 src/.merlin
+test/.merlin
+cli/.merlin
 wsproxy.install

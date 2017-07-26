@@ -12,12 +12,13 @@
  * GNU Lesser General Public License for more details.
  *)
 
+open Wslib
 
 let get_dir_path () = Printf.sprintf "/var/xapi/"
 
 let ignore_exn t () = Lwt.catch t (fun _ -> Lwt.return_unit)
 
-module LwtWsIteratee = Websockets.Wsprotocol(Lwt)
+module LwtWsIteratee = Wslib.Websockets.Wsprotocol(Lwt)
 open Lwt.Infix
 
 let start path handler =
